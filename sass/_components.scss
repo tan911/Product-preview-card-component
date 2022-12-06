@@ -1,0 +1,25 @@
+button {
+  width: 100%;
+  font-family: customFontPrimary, sans-serif;
+  font-weight: 500;
+  background-color: $color-primary;
+  color: $bg-color-card;
+  padding: 0.7em 0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  &:hover {
+    background-color: $color-text-heading;
+  }
+
+  &:active {
+    transform: translateY(3px);
+  }
+}

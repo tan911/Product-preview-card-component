@@ -1,0 +1,91 @@
+.main {
+  width: 100%;
+  max-width: 40rem;
+  background-color: $bg-color-card;
+  border-radius: 15px;
+
+  display: flex;
+
+  @include respond(tablet) {
+    width: 95%;
+  }
+
+  @include respond(phone) {
+    width: 90%;
+    flex-direction: column;
+  }
+
+  &__picture {
+    width: 50%;
+
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+
+    @include respond(phone) {
+      width: 100%;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  &__info {
+    width: 50%;
+    padding: 2rem 2.5em;
+
+    @include respond(tablet) {
+      padding: 2rem;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+      padding: 1.5em;
+    }
+  }
+
+  &__title {
+    font-size: var(--font-size-small);
+    color: $color-text-paragraph;
+    font-family: customFontPrimary, sans-serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  &__name {
+    color: $color-text-heading;
+    font-family: customFontSecondary, sans-serif;
+    font-size: var(--font-size-big);
+    line-height: 1;
+    margin: 0.5em 0;
+  }
+
+  &__message {
+    font-size: var(--font-size-small);
+    color: $color-text-paragraph;
+    font-family: customFontPrimary, sans-serif;
+  }
+
+  &__price {
+    color: $color-primary;
+    font-size: var(--font-size-big);
+    font-family: customFontSecondary, sans-serif;
+    margin: 0.5em 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__discount {
+    color: $color-text-paragraph;
+    font-size: var(--font-size-small);
+    font-family: customFontPrimary, sans-serif;
+  }
+}
